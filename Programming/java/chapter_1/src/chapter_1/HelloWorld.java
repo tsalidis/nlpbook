@@ -1,8 +1,9 @@
+package chapter_1;
 
 /**
  * 
  * @version 1.0 15/06/2021
- * @author Χρήστος Τσαλίδης
+ * @author Ξ§ΟΞ®ΟƒΟ„ΞΏΟ‚ Ξ¤ΟƒΞ±Ξ»Ξ―Ξ΄Ξ·Ο‚
  *
  */
 public class HelloWorld 

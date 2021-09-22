@@ -1,3 +1,4 @@
+package chapter_1;
 
 public class Operators
 {
@@ -9,7 +10,7 @@ public class Operators
 		int z = n ^ k;
 		int nn = ~n;
 
-		System.out.println("Δυαδικοί τελεστές:");
+		System.out.println("Ξ”Ο…Ξ±Ξ΄ΞΉΞΊΞΏΞ― Ο„ΞµΞ»ΞµΟƒΟ„Ξ­Ο‚:");
 		System.out.println("n="+n+" ("+Integer.toBinaryString(n)+"), k="+k +" ("+Integer.toBinaryString(k)+"), x=n & k, x=>"+x+" ("+Integer.toBinaryString(x)+")");
 		System.out.println("n="+Integer.toBinaryString(n)+", k="+Integer.toBinaryString(k)+", y=n | k, y=>"+Integer.toBinaryString(y));
 		System.out.println("n="+Integer.toBinaryString(n)+", k="+Integer.toBinaryString(k)+", z=n^k, z=>"+Integer.toBinaryString(z));
@@ -21,19 +22,19 @@ public class Operators
 		int  n=10, k=5, l=3;
 		int  x = n+k*l;
 
-		System.out.println("Προτεραιότητα '*' έναντι '+':");		
+		System.out.println("Ξ ΟΞΏΟ„ΞµΟΞ±ΞΉΟΟ„Ξ·Ο„Ξ± '*' Ξ­Ξ½Ξ±Ξ½Ο„ΞΉ '+':");		
 		System.out.println("n="+n+", k="+k+", l="+l+", x=n+k*l x=>"+x);		
 	}
 	
 	
 	static void Strings()
 	{
-		String message = "Επεξεργασία";
+		String message = "Ξ•Ο€ΞµΞΎΞµΟΞ³Ξ±ΟƒΞ―Ξ±";
 		
-		message = message + " Φυσικής";
-		message +=  " Γλώσσας";
+		message = message + " Ξ¦Ο…ΟƒΞΉΞΊΞ®Ο‚";
+		message +=  " Ξ“Ξ»ΟΟƒΟƒΞ±Ο‚";
 		
-		System.out.println("Συνένωση κορδονιών:");
+		System.out.println("Ξ£Ο…Ξ½Ξ­Ξ½Ο‰ΟƒΞ· ΞΊΞΏΟΞ΄ΞΏΞ½ΞΉΟΞ½:");
 		System.out.println("message=\""+message+"\"");
 	}
 	
