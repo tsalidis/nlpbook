@@ -326,7 +326,7 @@ public class GreekHyphenator
     return hpos;
   }
 
-  private int FindHyphenInConsonantsPhoneme(char[] vowelPhoneme, int phoneLen, boolean fLastPhoneme)
+  private int FindHyphenInConsonantsPhoneme(char[] consonantPhoneme, int phoneLen, boolean fLastPhoneme)
   {
     int hpos = NO_HYPH_POS;
 
@@ -335,7 +335,7 @@ public class GreekHyphenator
       switch (phoneLen)
       {
       case 2:	case 3:	case 4:
-        if (!isValidConsonantBigram(vowelPhoneme[0],vowelPhoneme[1]))
+        if (!isValidConsonantBigram(consonantPhoneme[0],consonantPhoneme[1]))
           hpos = 1;
         break;
       }			
@@ -369,24 +369,15 @@ public class GreekHyphenator
 
       phonelens[1] = phonelens[2] = 0;
 
-      // Step 1. Read the first phoneme with consonants
+      // Step 1. Read the phonemes of next syllable
       count = phonelens[0] = getPhoneme(word,widx,false,phonemes[0]);			
       widx += count;
-      if (widx != WORD_LEN)
-      {
-        // read the second phoneme with vowels
-        count = phonelens[1] = getPhoneme(word,widx,true,phonemes[1]);
-        widx += count;
-        if (widx != WORD_LEN)
-        {
-          // read the third phoneme with consonants
-          count = phonelens[2] = getPhoneme(word,widx,false,phonemes[2]);
-          widx += count;
-        }
-      }
+      count = phonelens[1] = getPhoneme(word,widx,true,phonemes[1]);
+      widx += count;
+      phonelens[2] = getPhoneme(word,widx,false,phonemes[2]);
 
       // process the phonemes
-      // Step 2 Append the first phoneme with consonants
+      // Step 2 Append the first phoneme with consonants (onset)
       hyphWord = AppendPhoneme(hyphWord,phonemes[0],phonelens[0]);
       hyph_pos += phonelens[0];  
 
