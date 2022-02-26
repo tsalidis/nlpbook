@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/System/Volumes/Data/projects/nlpbook/mnemosyne/bin/mnemolex.jar"/>
+	<classpathentry kind="var" path="MNEMOSYNE_PATH/bin/mnemolex.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
