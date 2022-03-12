@@ -6,7 +6,7 @@ public class MnemosyneHyphenator
 {
   public static void main(String[] args)
   {
-    String hyphDict = "../../../mnemosyne/dicts/gr_hyph.lex";
+    String hyphDict = "../../mnemosyne/dicts/gr_hyph.lex";
     
     String[] testWords = { "διαβατήριο", "βιασμός",
         "καλά", "έχω", "αηδόνι", "ουρανός", "ναύτης", "ατμός", "έρχομαι", "αστράφτω", "σφυρίχτρα", "άνθρωπος", "φεγγάρι", "σύννεφο",
