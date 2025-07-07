@@ -9,7 +9,7 @@ UNICODE_GREEK_EXTENDED_BLOCK_END    = 0x1FFF
 UNICODDE_ANSII_BLOCK_START = 0x0000
 UNICODE_ANSII_BLOCK_END    = 0x007F
 
-def print_unicode_block(block,beg,end):
+def print_unicode_block(block: str, beg: int, end: int):
   print(f"\nUnicode Block: {block}")
   for i in range(beg,end):
     ch = chr(i)
