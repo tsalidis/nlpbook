@@ -11,3 +11,10 @@ torch>=2.2
 tensorflow>=2.15
 emoji
 stanza
+ply
+owlready2
+rdflib
+lxml
+lark
+#coreferee
+torch

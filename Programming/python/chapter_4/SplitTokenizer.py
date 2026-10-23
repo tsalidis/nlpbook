@@ -9,11 +9,12 @@ print(tokens)
 
 text2 = "ένα,δύο-τρία/τέσσερα!πέντε.έξι"
  
-tokens = re.split('[-,/.!]', text2)
+tokens = re.split(r'[-,/.!]', text2)
 
 print(tokens)
 
-tokens = re.split('((?<=[-,/.!])|(?=[-,/.!]))', text2) 
+#tokens = re.split(r'((?<=[-,/.!])|(?=[-,/.!]))', text2)
+tokens = re.findall(r'[^-,/.!]+|[-,/.!]', text2)
 
 print(tokens)
 

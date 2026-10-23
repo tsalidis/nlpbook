@@ -17,9 +17,9 @@ class GreekHyphenator:
     self.accentVowels = ('Ά', 'ά', 
                          'Έ', 'έ', 
                          'Ή', 'ή',
-                         'Ί', 'ί', 'ΐ', 
+                         'Ί', 'ί', 'ϊ', 'ΐ',
                          'Ό', 'ό',
-                         'Ύ', 'ύ', 'ΰ',
+                         'Ύ', 'ύ', 'ϋ', 'ΰ',
                          'Ώ', 'ώ'
                         )
     self.bigramVowels = ( 'αη', 'αή', 'αι', 'αί', 'αϊ', 'αυ', 'αύ',
@@ -28,8 +28,8 @@ class GreekHyphenator:
                           'οι', 'οί', 'ου', 'ού', 'οη', 'οή',
                           'υα', 'υά', 'υι', 'υί', 'υο', 'υό', 'υω', 'υώ',
                         )
-    self.trigramVowels = ( 'εια', 'ειε', 'ειο', 'ειω',
-                           'οια', 'οιε', 'οιο'
+    self.trigramVowels = ( 'εια', 'ειά', 'ειε', 'ειέ', 'ειο', 'ειό', 'ειω', 'ειώ',
+                           'οια', 'οιά', 'οιε', 'οιέ', 'οιο', 'οιό', 'ιου', 'ιού'
                          )
     self.fourgramVowels = ( 'ειου', 'ειού',
                             'οιου', 'οιού'
@@ -47,9 +47,6 @@ class GreekHyphenator:
                               'φθ', 'φκ', 'φλ', 'φρ', 'φτ', 'φχ',
                               'χθ', 'χλ', 'χν', 'χρ', 'χτ'
                             )
-    
-    print('')
-    
     
   def __isVowel(self, ch: str) -> bool:
     return ch in self.vowels
@@ -115,8 +112,8 @@ class GreekHyphenator:
             hpos = 1
           elif not self.__isAccentVowel(strPhoneme[2]):
             hpos = 2
-      else:
-        hpos = 3
+        else:
+          hpos = 3
       
     return hpos
 

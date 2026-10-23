@@ -9,4 +9,4 @@ doc = nlp(sentence)
 
 for sent in doc.sentences:
     for word in sent.words:
-        print(f"{word.text} → {word.lemma}")
+        print(f"Word: {word.text:<12} | Lemma: {word.lemma:<12} | POS: {word.upos}")

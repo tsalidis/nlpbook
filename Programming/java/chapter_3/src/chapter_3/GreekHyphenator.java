@@ -433,9 +433,12 @@ public class GreekHyphenator
         "χάιδεψε", "κορόιδο", "ζεϊμπέκικο", "πλάι"
     };
 
+    String[] testWords3 = { "αργαλειού", "καινούργιου", "τέτοιους"
+    };
+
     GreekHyphenator gr_hyphenator = new GreekHyphenator();
 
-    for (String word : testWords)
+    for (String word : testWords3)
     {
       String hyphWord = gr_hyphenator.hyphenate(word);
 

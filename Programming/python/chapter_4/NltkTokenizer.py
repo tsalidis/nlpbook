@@ -13,4 +13,4 @@ print(word_tokenize(text2,language="greek"))
 
 from nltk import regexp_tokenize
 
-print(regexp_tokenize(text2,'\w+|[-,/.!]'))
+print(regexp_tokenize(text2,r"\w+|[-,/.!]"))

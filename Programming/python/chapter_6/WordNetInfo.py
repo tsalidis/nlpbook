@@ -55,7 +55,7 @@ for syns in synsets:
 syns_1 = wordnet.synset('cat.n.01')
 syns_2 = wordnet.synset('lion.n.01')
 
-print('\n*** Similarity between "cat" and "lion"')
+print('\n*** Βαθμός ομοιότητας Wu–Palmer between "cat" and "lion"')
 print(syns_1.wup_similarity(syns_2)*100)
     
 synsets = wordnet.synsets("cat", pos=wordnet.VERB)
